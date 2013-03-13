@@ -52,9 +52,9 @@ public class OthelloMain extends JFrame {
 		// GameMaster.SIZE, panel); // 人間
 		// blackFactory = new ManualStrategyFactory(Player.Black,
 		// GameMaster.SIZE); //人間
-		// blackFactory = new KmatsStrategyFactory(Player.Black,
+		blackFactory = new KmatsStrategyFactory(Player.Black, GameMaster.SIZE);
+		// blackFactory = new IshizakiStrategyFactory(Player.Black,
 		// GameMaster.SIZE);
-		blackFactory = new IshizakiStrategyFactory(Player.Black, GameMaster.SIZE);
 
 		// 後手の戦略を選択。用いたい戦略のコメントアウトを外す。
 		// whiteFactory = new SimpleStrategyFactory(Player.White,
@@ -63,11 +63,11 @@ public class OthelloMain extends JFrame {
 		// GameMaster.SIZE); // 開放度理論
 		// whiteFactory = new ManualGUIStrategyFactory(Player.White,
 		// GameMaster.SIZE, panel); // 人間
-		whiteFactory = new KmatsStrategyFactory(Player.White, GameMaster.SIZE);
+		// whiteFactory = new KmatsStrategyFactory(Player.White,
+		// GameMaster.SIZE);
 		// whiteFactory = new MagiSystemStrategyFactory(Player.White,
 		// GameMaster.SIZE); // 強化版開放度理論
-		// whiteFactory = new IshizakiStrategyFactory(Player.White,
-		// GameMaster.SIZE);
+		whiteFactory = new IshizakiStrategyFactory(Player.White, GameMaster.SIZE);
 
 		blackStrategy = blackFactory.createStrategy();
 		whiteStrategy = whiteFactory.createStrategy();
